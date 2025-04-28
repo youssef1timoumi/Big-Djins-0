@@ -85,10 +85,7 @@ export const footerData: FooterProps = {
           label: 'Customer stories',
           href: '/',
         },
-        {
-          label: 'Pricing',
-          href: '/pricing',
-        },
+
         {
           label: 'Resources',
           href: '/',

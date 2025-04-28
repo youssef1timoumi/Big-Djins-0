@@ -8,7 +8,6 @@ import Features from '~/components/widgets/Features';
 import Content from '~/components/widgets/Content';
 import Steps from '~/components/widgets/Steps';
 import Testimonials from '~/components/widgets/Testimonials';
-import Pricing from '~/components/widgets/Pricing';
 import Team from '~/components/widgets/Team';
 import CallToAction2 from '~/components/widgets/CallToAction2';
 import Contact from '~/components/widgets/Contact';
@@ -17,9 +16,7 @@ import {
   contactHome,
   contentHomeOne,
   contentHomeTwo,
-  featuresHome,
   heroHome,
-  pricingHome,
   socialProofHome,
   stepsHome,
   teamHome,
@@ -29,18 +26,15 @@ import {
 export const metadata: Metadata = {
   title: SITE.title,
 };
-
 export default function Page() {
   return (
     <>
       <Hero {...heroHome} />
       <SocialProof {...socialProofHome} />
-      <Features {...featuresHome} />
       <Content {...contentHomeOne} />
       <Content {...contentHomeTwo} />
       <Steps {...stepsHome} />
       <Testimonials {...testimonialsHome} />
-      <Pricing {...pricingHome} />
       <Team {...teamHome} />
       <Contact {...contactHome} />
       <CallToAction2 {...callToAction2Home} />
