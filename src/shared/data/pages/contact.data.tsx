@@ -68,6 +68,12 @@ export const contact2Contact: ContactProps = {
         autocomplete: 'on',
         placeholder: 'Email address',
       },
+      {
+        type: 'file',
+        label: 'Upload file',
+        name: 'document',
+        accept: '.pdf,.docx',
+      },
     ],
     radioBtns: {
       label: 'What is the reason for your contact?',

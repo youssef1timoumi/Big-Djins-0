@@ -31,8 +31,8 @@ import nextJsLogo from '~/assets/images/nextjs-logo.png';
 import reactLogo from '~/assets/images/react-logo.png';
 import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
 import typescriptLogo from '~/assets/images/typescript-logo.png';
-import cameraFrontImg from '~/assets/images/camera-front.jpg';
-import cameraBackImg from '~/assets/images/camera-back.jpg';
+import Dpants from '~/assets/images/darkpants.png';
+import Pants from '~/assets/images/pants.png';
 import gasImg from '~/assets/images/gas.jpg';
 
 // Hero data on Home page *******************
@@ -197,8 +197,8 @@ export const contentHomeOne: ContentProps = {
     },
   ],
   image: {
-    src: cameraFrontImg,
-    alt: 'Colorful Image',
+    src: Dpants,
+    alt: 'Dark Pants',
   },
   isReversed: false,
   isAfterContent: false,
@@ -231,50 +231,13 @@ export const contentHomeTwo: ContentProps = {
     },
   ],
   image: {
-    src: cameraBackImg,
-    alt: 'Colorful Image',
+    src: Pants,
+    alt: 'Colorful Pants',
   },
   isReversed: true,
   isAfterContent: true,
 };
 
-// Steps data on Home page *******************
-export const stepsHome: StepsProps = {
-  id: 'steps-on-home',
-  hasBackground: false,
-  isReversed: false,
-  isImageDisplayed: true,
-  image: {
-    src: gasImg,
-    alt: 'Steps image',
-  },
-  header: {
-    title: 'Sed ac magna sit amet risus tristique interdum.',
-  },
-  items: [
-    {
-      title: 'Step 1',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
-      icon: IconArrowDown,
-    },
-    {
-      title: 'Step 2',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
-      icon: IconArrowDown,
-    },
-    {
-      title: 'Step 3',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
-      icon: IconArrowDown,
-    },
-    {
-      title: 'Ready!',
-    },
-  ],
-};
 
 // Testimonials data on Home page *******************
 export const testimonialsHome: TestimonialsProps = {

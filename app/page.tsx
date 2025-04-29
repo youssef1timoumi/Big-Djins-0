@@ -18,7 +18,6 @@ import {
   contentHomeTwo,
   heroHome,
   socialProofHome,
-  stepsHome,
   teamHome,
   testimonialsHome,
 } from '~/shared/data/pages/home.data';
@@ -33,7 +32,6 @@ export default function Page() {
       <SocialProof {...socialProofHome} />
       <Content {...contentHomeOne} />
       <Content {...contentHomeTwo} />
-      <Steps {...stepsHome} />
       <Testimonials {...testimonialsHome} />
       <Team {...teamHome} />
       <Contact {...contactHome} />

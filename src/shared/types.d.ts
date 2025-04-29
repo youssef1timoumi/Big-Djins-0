@@ -60,6 +60,7 @@ type Input = {
   name?: string;
   autocomplete?: string;
   placeholder?: string;
+  accept?: string;
 };
 
 type Textarea = {
