@@ -325,6 +325,7 @@ type StatsProps = Widget & {
 
 type SocialProofProps = Widget & {
   images: Array<Image>;
+  title?: string;
 };
 
 type ContactProps = Widget & {

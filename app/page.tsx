@@ -12,8 +12,6 @@ import Team from '~/components/widgets/Team';
 import CallToAction2 from '~/components/widgets/CallToAction2';
 import Contact from '~/components/widgets/Contact';
 import {
-  callToAction2Home,
-  contactHome,
   contentHomeOne,
   contentHomeTwo,
   heroHome,
@@ -34,8 +32,6 @@ export default function Page() {
       <Content {...contentHomeTwo} />
       <Testimonials {...testimonialsHome} />
       <Team {...teamHome} />
-      <Contact {...contactHome} />
-      <CallToAction2 {...callToAction2Home} />
     </>
   );
 }

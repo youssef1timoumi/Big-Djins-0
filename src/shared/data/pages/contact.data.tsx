@@ -1,3 +1,4 @@
+
 import { IconClock, IconHeadset, IconHelp, IconMapPin, IconMessages, IconPhoneCall } from '@tabler/icons-react';
 import { ContactProps, FeaturesProps } from '~/shared/types';
 import { HeroProps } from '~/shared/types';
@@ -31,17 +32,14 @@ export const contact2Contact: ContactProps = {
     {
       title: 'Our Address',
       description: ['..', 'Jammel, Sahel'],
-      icon: IconMapPin,
     },
     {
       title: 'Contact',
       description: ['Mobile: +216 99 999 999', 'Mail: bigdjins@gmail.com'],
-      icon: IconPhoneCall,
     },
     {
       title: 'Working hours',
       description: ['Monday - Friday: 08:00 - 17:00'],
-      icon: IconClock,
     },
   ],
   form: {

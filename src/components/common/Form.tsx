@@ -1,20 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { FormProps } from '../../shared/types';
-
+import { FormProps } from '~/shared/types';
+type FormComponentProps = FormProps & {
+  onSubmit?: React.FormEventHandler<HTMLFormElement>;
+};
 const Form = ({
-  title,
-  description,
-  inputs,
-  radioBtns,
-  textarea,
-  checkboxes,
-  btn,
-  btnPosition,
-  containerClass,
-}: FormProps) => {
+                title,
+                description,
+                inputs,
+                radioBtns,
+                textarea,
+                checkboxes,
+                btn,
+                btnPosition,
+                containerClass,
+                onSubmit,
+              }: FormComponentProps) => {
   const [inputValues, setInputValues] = useState([]);
   const [radioBtnValue, setRadioBtnValue] = useState('');
   const [textareaValues, setTextareaValues] = useState('');
@@ -52,7 +55,12 @@ const Form = ({
   };
 
   return (
-    <form id="contactForm" className={twMerge('', containerClass)}>
+    <form
+      id="contactForm"
+      onSubmit={onSubmit} // ✅ this is what wires up handleSubmit!
+      encType="multipart/form-data" // ✅ required for file upload
+      className={twMerge('', containerClass)}
+    >
       {title && <h2 className={`${description ? 'mb-2' : 'mb-4'} text-2xl font-bold`}>{title}</h2>}
       {description && <p className="mb-4">{description}</p>}
       <div className="mb-6">
@@ -144,7 +152,7 @@ const Form = ({
         <div
           className={`${btnPosition === 'left' ? 'text-left' : btnPosition === 'right' ? 'text-right' : 'text-center'}`}
         >
-          <button type={btn.type || 'button'} className="btn btn-primary sm:mb-0">
+          <button type="submit" className="btn btn-primary sm:mb-0">
             {btn.title}
           </button>
         </div>

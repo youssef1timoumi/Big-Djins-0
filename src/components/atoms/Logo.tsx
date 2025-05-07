@@ -8,7 +8,7 @@ const Logo = () => (
       height={75}
       className="mr-2" // small margin between logo and text
     />
-    BIG DJINS
+    BIG DJINS:0
   </span>
 );
 

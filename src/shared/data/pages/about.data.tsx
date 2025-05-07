@@ -160,50 +160,6 @@ export const stepsAbout: StepsProps = {
   ],
 };
 
-// Features3 data on About page *******************
-export const features3About: FeaturesProps = {
-  id: 'featuresThree-on-about',
-  hasBackground: false,
-  columns: 3,
-  header: {
-    title: 'Our culture',
-    subtitle:
-      '..',
-    tagline: 'culture',
-  },
-  items: [
-    {
-      title: 'Customer engagement',
-      description: '..',
-      icon: IconCirclesRelation,
-    },
-    {
-      title: 'Creativity and design excellence',
-      description: '..',
-      icon: IconPalette,
-    },
-    {
-      title: 'Continuous learning',
-      description: '..',
-      icon: IconBook,
-    },
-    {
-      title: 'Collaboration and cross-functionality',
-      description: '..',
-      icon: IconPuzzle2,
-    },
-    {
-      title: 'Entrepreneurial spirit',
-      description: '...',
-      icon: IconFlame,
-    },
-    {
-      title: 'Employee well-being and balance',
-      description: '...',
-      icon: IconScale,
-    },
-  ],
-};
 
 // Features data on About page *******************
 export const featuresAbout: FeaturesProps = {
