@@ -17,14 +17,12 @@ export async function nextRequestToNodeRequest(req: NextRequest): Promise<Incomi
       const { done, value } = await reader.read();
       if (done) this.push(null);
       else this.push(value);
-    }
+    },
   });
 
-  const nodeReq = Object.assign(stream, {
+  return Object.assign(stream, {
     headers,
     method: req.method,
     url: req.url,
   }) as unknown as IncomingMessage;
-
-  return nodeReq;
 }

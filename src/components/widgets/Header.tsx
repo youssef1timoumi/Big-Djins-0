@@ -16,24 +16,15 @@ const Header = () => {
 
   const ref = useRef(null);
 
-  const updatedIsDropdownOpen =
-    links &&
-    links.map(() => {
-      return false;
-    });
-
+  const updatedIsDropdownOpen = links && links.map(() => false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean[]>(updatedIsDropdownOpen as boolean[]);
   const [isToggleMenuOpen, setIsToggleMenuOpen] = useState<boolean>(false);
 
   const handleDropdownOnClick = (index: number) => {
     setIsDropdownOpen((prevValues) => {
       const newValues = [...(prevValues as boolean[])];
-      newValues.forEach((value, i) => {
-        if (value === true) {
-          newValues[i] = false;
-        } else {
-          newValues[i] = i === index;
-        }
+      newValues.forEach((_, i) => {
+        newValues[i] = i === index;
       });
       return newValues;
     });
@@ -57,19 +48,14 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in dark:bg-slate-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
+      className={`top-0 z-40 mx-auto w-full flex-none transition-all duration-100 ease-in ${
         isSticky ? 'sticky' : 'relative'
       } ${isToggleMenuOpen ? 'h-screen md:h-auto' : 'h-auto'}`}
       id="header"
+      style={{ backgroundColor: '#d9d9d9', color: '#000' }}
     >
       <div className="mx-auto w-full max-w-7xl md:flex md:justify-between md:py-3.5 md:px-4">
-        <div
-          className={`flex justify-between py-3 px-3 md:py-0 md:px-0 ${
-            isToggleMenuOpen
-              ? 'md:bg-transparent md:dark:bg-transparent md:border-none bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-600'
-              : ''
-          }`}
-        >
+        <div className={`flex justify-between py-3 px-3 md:py-0 md:px-0`}>
           <Link
             className="flex items-center"
             href="/"
@@ -83,10 +69,11 @@ const Header = () => {
             <ToggleMenu handleToggleMenuOnClick={handleToggleMenuOnClick} isToggleMenuOpen={isToggleMenuOpen} />
           </div>
         </div>
+
         <nav
           className={`${isToggleMenuOpen ? 'block px-3' : 'hidden'} h-screen md:w-full ${
             position === 'right' ? 'justify-end' : position === 'left' ? 'justify-start' : 'justify-center'
-          } w-auto overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:items-center md:overflow-visible`}
+          } w-auto overflow-y-auto md:mx-5 md:flex md:h-auto md:items-center md:overflow-visible`}
           aria-label="Main navigation"
         >
           <ul
@@ -99,10 +86,10 @@ const Header = () => {
                   {links && links.length ? (
                     <>
                       <button
-                        className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
+                        className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-700"
                         onClick={() => handleDropdownOnClick(index)}
                       >
-                        {label}{' '}
+                        {label}
                         {Icon && (
                           <Icon
                             className={`${
@@ -114,12 +101,13 @@ const Header = () => {
                       <ul
                         className={`${
                           isDropdownOpen[index] ? 'block' : 'md:hidden'
-                        } rounded pl-4 font-medium drop-shadow-xl md:absolute md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md dark:md:bg-slate-900/90 md:border md:border-gray-200 md:dark:border-slate-700`}
+                        } rounded pl-4 font-medium drop-shadow-xl md:absolute md:min-w-[200px] md:pl-0 md:border md:border-gray-400`}
+                        style={{ backgroundColor: '#d9d9d9', color: '#000' }}
                       >
                         {links.map(({ label: label2, href: href2 }, index2) => (
                           <li key={`item-link-${index2}`}>
                             <Link
-                              className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b dark:hover:bg-gray-700 md:hover:bg-gray-200"
+                              className="block py-2 px-5 first:rounded-t last:rounded-b hover:bg-gray-300"
                               href={href2 as string}
                               onClick={() =>
                                 isToggleMenuOpen ? handleToggleMenuOnClick() : handleCloseDropdownOnClick(index)
@@ -133,7 +121,7 @@ const Header = () => {
                     </>
                   ) : (
                     <Link
-                      className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
+                      className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-700"
                       href={href as string}
                       onClick={() => (isToggleMenuOpen ? handleToggleMenuOnClick() : handleDropdownOnClick(index))}
                     >
@@ -144,16 +132,18 @@ const Header = () => {
               ))}
           </ul>
         </nav>
+
         <div
           className={`${
             isToggleMenuOpen ? 'block' : 'hidden'
-          } fixed bottom-0 left-0 w-full justify-end p-3 md:static md:mb-0 md:flex md:w-auto md:self-center md:p-0 md:bg-transparent md:dark:bg-transparent md:border-none bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-600`}
+          } fixed bottom-0 left-0 w-full justify-end p-3 md:static md:mb-0 md:flex md:w-auto md:self-center md:p-0 border-t border-gray-400`}
+          style={{ backgroundColor: '#d9d9d9', color: '#000' }}
         >
           <div className="flex w-full items-center justify-between md:w-auto">
             {showToggleTheme && <ToggleDarkMode />}
             {showRssFeed && (
               <Link
-                className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                className="inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-400"
                 aria-label="RSS Feed"
                 href=""
               >

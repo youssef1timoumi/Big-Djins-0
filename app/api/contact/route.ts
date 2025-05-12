@@ -29,10 +29,15 @@ export async function POST(req: NextRequest): Promise<Response> {
 
         try {
           // Google Sheets
+          const credsPath = path.join(process.cwd(), 'app/api/contact/cred.json');
+          const credsRaw = fs.readFileSync(credsPath, 'utf8');
+          const creds = JSON.parse(credsRaw);
+
           const auth = new google.auth.GoogleAuth({
-            keyFile: path.join(process.cwd(), 'app/api/contact/cred.json'),
+            credentials: creds,
             scopes: ['https://www.googleapis.com/auth/spreadsheets'],
           });
+
 
           const sheets = google.sheets({ version: 'v4', auth });
           await sheets.spreadsheets.values.append({

@@ -1,12 +1,13 @@
 import Image from 'next/image'; // ⬅️ Next.js optimized Image component
+
 const Logo = () => (
-  <span className="flex items-center ml-2 self-center whitespace-nowrap text-2xl font-bold text-gray-900 dark:text-white md:text-xl">
+  <span className="flex items-center ml-2 self-center whitespace-nowrap text-2xl font-bold text-black md:text-xl">
     <Image
-      src="/Djins.png" // ⬅️ path should be public folder based
+      src="/Djins.png"
       alt="BIG DJINS Logo"
-      width={75} // adjust size here
+      width={75}
       height={75}
-      className="mr-2" // small margin between logo and text
+      className="mr-2"
     />
     BIG DJINS:0
   </span>
