@@ -27,24 +27,20 @@ import {
   TestimonialsProps,
 } from '../../types';
 import heroImg from '~/assets/images/hero.jpg';
-import nextJsLogo from '~/assets/images/arypack.png';
-import reactLogo from '~/assets/images/hdd.png';
-import tailwindCssLogo from '~/assets/images/prym.png';
-import typescriptLogo from '~/assets/images/Coats.png';
+import arypack from '~/assets/images/arypack.png';
+import hdd from '~/assets/images/hdd.png';
+import prym from '~/assets/images/prym.png';
+import coats from '~/assets/images/Coats.png';
 import Dpants from '~/assets/images/darkpants.png';
 import Pants from '~/assets/images/pants.png';
-import gasImg from '~/assets/images/gas.jpg';
+import PreventsTN from '~/assets/images/prevents.png';
+import ea from '~/assets/images/eatn.png';
+import gerber from '~/assets/images/gerber.png';
+import ykk from '~/assets/images/ykk.png';
 
 // Hero data on Home page *******************
 export const heroHome: HeroProps = {
-  title: (
-    <>
-      <span className="hidden md:inline">
-        Your trusted partner for textile production in Sahel, <em>Jammel</em>, <em>Tunisia</em>.
-      </span>{' '}
 
-    </>
-  ),
   callToAction: {
     text: 'Contact US',
     href: '/contact',
@@ -67,24 +63,44 @@ export const socialProofHome: SocialProofProps = {
   hasBackground: false,
   images: [
     {
+      link: 'https://preventis.com.tn/',
+      src: ykk,
+      alt: 'YKK LOGO',
+    },
+    {
+      link: 'https://preventis.com.tn/',
+      src: PreventsTN,
+      alt: 'PreventsTN',
+    },
+    {
       link: 'https://nextjs.org/',
-      src: nextJsLogo,
-      alt: 'NextJs Logo',
+      src: arypack,
+      alt: 'Arypack',
+    },
+    {
+      link: 'https://nextjs.org/',
+      src: gerber,
+      alt: 'Gerber LOGO',
+    },
+    {
+      link: 'https://nextjs.org/',
+      src: hdd,
+      alt: 'HDD LOGO',
     },
     {
       link: 'https://react.dev/',
-      src: reactLogo,
-      alt: 'React Logo',
+      src: coats,
+      alt: 'Coats LOGO',
     },
     {
       link: 'https://tailwindcss.com/',
-      src: tailwindCssLogo,
-      alt: 'Tailwind CSS Logo',
+      src: prym,
+      alt: 'Prym LOGO',
     },
     {
-      link: 'https://www.typescriptlang.org/',
-      src: typescriptLogo,
-      alt: 'Typescript Logo',
+      link: 'http://www.e-a.com.tn/',
+      src: ea,
+      alt: 'E & A LOGO',
     },
   ],
 };

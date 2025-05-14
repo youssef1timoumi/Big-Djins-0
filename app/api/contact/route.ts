@@ -42,16 +42,18 @@ export async function POST(req: NextRequest): Promise<Response> {
           const sheets = google.sheets({ version: 'v4', auth });
           await sheets.spreadsheets.values.append({
             spreadsheetId: '1JL5fV2gTwNGDtOW7lzaHBrgr6D7sOUH0FS6QONprxTo',
-            range: 'Sheet1!A1',
+            range: 'Clients!A1',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
               values: [[
+                new Date().toLocaleString(), // Timestamp
                 Array.isArray(name) ? name[0] : name || '',
                 Array.isArray(lastName) ? lastName[0] : lastName || '',
                 Array.isArray(email) ? email[0] : email || '',
                 Array.isArray(radio) ? radio[0] : radio || '',
                 Array.isArray(textarea) ? textarea[0] : textarea || '',
-                Array.isArray(checkboxes) ? checkboxes.join(', ') : checkboxes || '',
+                checkboxes?.includes('privacy') ? 'Yes' : 'No',
+                checkboxes?.includes('updates') ? 'Yes' : 'No',
                 file?.originalFilename || 'No file',
               ]],
             },
@@ -71,8 +73,15 @@ export async function POST(req: NextRequest): Promise<Response> {
           await transporter.sendMail({
             from: `"Contact Bot" <${process.env.SMTP_USER}>`,
             to: 'youssef.timoumi@esprit.tn',
-            subject: `New Contact: ${name} ${lastName}`,
-            text: Array.isArray(textarea) ? textarea.join('\n') : (textarea || ''),
+            subject: `New Contact Submission from ${name} <${email}>`,
+            text: `
+    New contact submission received:
+    Name: ${name} ${lastName}
+    Email: ${email}
+    Message: ${Array.isArray(textarea) ? textarea.join('\n') : (textarea || '')}
+    Privacy Policy: ${Array.isArray(checkboxes) ? checkboxes.join(', ') : checkboxes || ''}
+    Files: ${file?.originalFilename || 'No file attached'}
+  `,
             attachments: file && true ? [{
               filename: file.originalFilename || 'uploaded.file',
               path: file.filepath,
