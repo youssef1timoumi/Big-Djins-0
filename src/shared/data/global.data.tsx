@@ -12,35 +12,16 @@ import { AnnouncementProps, FooterProps, HeaderProps } from '../types';
 export const headerData: HeaderProps = {
   links: [
     {
-      label: 'Pages',
-      icon: IconChevronDown,
-      links: [
-        {
-          label: 'About us',
-          href: '/about',
-        },
-        {
-          label: 'Contact us',
-          href: '/contact',
-        },
-
-        {
-          label: 'Terms & Conditions',
-          href: '/terms',
-        },
-        {
-          label: 'Privacy Policy',
-          href: '/privacy',
-        },
-      ],
-    },
-    {
       label: 'Blog',
       href: '/blog',
     },
     {
       label: 'Contact',
       href: '/contact',
+    },
+    {
+      label: 'About us',
+      href: '/about',
     },
   ],
   isSticky: true,

@@ -1,6 +1,7 @@
 import { StatsProps } from '~/shared/types';
 import { getSuffixNumber } from '~/utils/utils';
 import WidgetWrapper from '../common/WidgetWrapper';
+import AnimatedNumber from './AnimatedNumber'; // Import the AnimatedNumber component
 
 const Stats = ({ items, id, hasBackground = false }: StatsProps) => (
   <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
@@ -11,7 +12,12 @@ const Stats = ({ items, id, hasBackground = false }: StatsProps) => (
           className="mb-12 text-center md:mb-0 md:border-r md:last:border-none dark:md:border-slate-500"
         >
           <div className="font-heading text-primary text-[2.6rem] font-bold dark:text-white lg:text-5xl xl:text-6xl">
-            {getSuffixNumber(title as number)}
+            {typeof title === 'number' ? (
+              <AnimatedNumber value={title} />
+            ) : (
+              // Ensure title is a number before passing to getSuffixNumber
+              typeof title === 'string' ? getSuffixNumber(Number(title)) : null
+            )}
           </div>
           <p className="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
             {description}

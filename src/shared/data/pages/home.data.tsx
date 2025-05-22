@@ -72,21 +72,13 @@ export const socialProofHome: SocialProofProps = {
       src: PreventsTN,
       alt: 'PreventsTN',
     },
-    {
-      link: 'https://nextjs.org/',
-      src: arypack,
-      alt: 'Arypack',
-    },
+
     {
       link: 'https://nextjs.org/',
       src: gerber,
       alt: 'Gerber LOGO',
     },
-    {
-      link: 'https://nextjs.org/',
-      src: hdd,
-      alt: 'HDD LOGO',
-    },
+
     {
       link: 'https://react.dev/',
       src: coats,
@@ -189,28 +181,28 @@ export const contentHomeOne: ContentProps = {
   id: 'contentOne-on-home-one',
   hasBackground: true,
   header: {
-    title: 'Aliquip definiebas ad est',
-    subtitle: 'Quando cetero his ne, eum admodum sapientem ut',
-    tagline: 'Content',
+    title: 'What do we offer?\n',
+    subtitle: 'At BIG DJINS:0, we offer a comprehensive range of work jeans and casual jeans, designed to meet the diverse needs of our B2B clients.',
+    tagline: 'Offers',
   },
   content:
-    'Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.',
+    'Tous nos produits sont fabriqués à partir de jeans recyclés issus\n' +
+    'd\'\n' +
+    'une économie circulaire, contribuant ainsi à une production\n' +
+    'plus durable et respectueuse de l\'\n' +
+    'environnement.',
   items: [
     {
-      title: 'Per ei quaeque sensibus',
+      title: 'Work Jeans',
       description:
-        'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+        'Designed with professionals in mind, our work jeans combine durability, comfort, and functionality—perfectly suited for the most demanding environments.',
     },
     {
-      title: 'Cu imperdiet posidonium sed',
+      title: 'Urban Jeans',
       description:
-        'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+        'Stylish and long-lasting, our urban jeans are ideal for everyday wear, blending superior quality with modern style.',
     },
-    {
-      title: 'Nulla omittam sadipscing mel ne',
-      description:
-        'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
-    },
+
   ],
   image: {
     src: Dpants,
@@ -225,26 +217,24 @@ export const contentHomeTwo: ContentProps = {
   id: 'contentOne-on-home-two',
   hasBackground: true,
   content:
-    'Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nib dissentias, mei exerci tamquam euripidis cu.',
+    'Moreover, each item can be customized to meet the specific needs of our partners, ensuring a truly tailored textile solution.',
   items: [
     {
-      title: 'Per ei quaeque sensibus',
+      title: 'Denim Overalls',
+      description:
+        'Comfortable and durable, our overalls provide a versatile solution for both work and leisure.',
     },
     {
-      title: 'Cu imperdiet posidonium sed',
+      title: 'Denim Jackets',
+      description:
+        'Timeless and on-trend, our denim jackets combine style with everyday practicality.',
     },
     {
-      title: 'Nulla omittam sadipscing mel ne',
+      title: 'Denim Bags',
+      description:
+        'Crafted from durable denim, our bags offer an eco-friendly and stylish alternative to traditional materials.',
     },
-    {
-      title: 'Per ei quaeque sensibus',
-    },
-    {
-      title: 'Cu imperdiet posidonium sed',
-    },
-    {
-      title: 'Nulla omittam sadipscing mel ne',
-    },
+
   ],
   image: {
     src: Pants,
@@ -255,78 +245,6 @@ export const contentHomeTwo: ContentProps = {
 };
 
 
-// Testimonials data on Home page *******************
-export const testimonialsHome: TestimonialsProps = {
-  id: 'testimonials-on-home',
-  hasBackground: true,
-  header: {
-    title: 'What our customers say about us',
-    subtitle:
-      'Etiam sed odio et dolor auctor gravida. Curabitur tincidunt elit non risus pharetra sodales. Etiam sit amet mattis massa.',
-  },
-  testimonials: [
-    {
-      name: 'Tayla Kirsten',
-      job: 'Marketing Manager',
-      testimonial: `I'm impressed by the speed and performance of these templates. My website now loads in the blink of an eye, significantly enhancing my visitors' experience. Thanks to TailNext, my online business is thriving.`,
-      image: {
-        src: 'https://images.unsplash.com/photo-1619734086067-24bf8889ea7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: 'Tayla Kirsten',
-      },
-      href: '/',
-    },
-    {
-      name: 'Silver Jordan',
-      job: 'Senior Marketer',
-      testimonial: `I had never found it so easy to customize a website. TailNext's templates are incredibly flexible, and with Tailwind CSS, I've managed to give my website the look and feel I always wanted. Highly recommended!`,
-      image: {
-        src: 'https://images.unsplash.com/photo-1565049786474-1dea82a8b995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: 'Silver Jordan',
-      },
-      href: '/',
-    },
-    {
-      name: 'Kelsey Arden',
-      job: 'Co-Founder & CEO',
-      testimonial: `As a beginner in web development, I really needed clear guidance. Tailnext made it possible. I was able to install and customize my website seamlessly, and I'm thrilled with the results!`,
-      image: {
-        src: 'https://images.unsplash.com/photo-1659057106920-da022cfbc0cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: 'Kelsey Arden',
-      },
-      href: '/',
-    },
-    {
-      name: 'Sarah Johnson',
-      job: 'Business Owner',
-      testimonial: `They've not only saved me a ton of time but have also made my websites look incredibly professional. The level of detail and thought that went into designing these templates is truly impressive.`,
-      image: {
-        src: 'https://images.unsplash.com/photo-1572417884940-c24659be6068?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: 'Sarah Johnson',
-      },
-      href: '/',
-    },
-    {
-      name: 'Keith Young',
-      job: 'Freelance Developer',
-      testimonial: `The clean code and integration with Next.js make my projects a breeze. Plus, the responsive design ensures that my clients' websites look amazing on any device. These templates have become my secret weapon for success!`,
-      image: {
-        src: 'https://images.unsplash.com/photo-1694287877106-ee22f764aef1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: 'Keith Young',
-      },
-      href: '/',
-    },
-    {
-      name: 'Lisa Gordon',
-      job: 'Project Manager',
-      testimonial: `Their templates are not only stunning but also user-friendly. The support I received from their community has been exceptional. I'm proud to say that I've built my dream website with TailNext.`,
-      image: {
-        src: 'https://images.unsplash.com/photo-1665984867752-6370ab5ae35e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: 'Lisa Gordon',
-      },
-      href: '/',
-    },
-  ],
-};
 
 
 // Team data on Home page *******************
@@ -341,104 +259,55 @@ export const teamHome: TeamProps = {
   },
   teams: [
     {
-      name: 'Cindy Belcher',
-      occupation: 'SEO Consultant',
+      name: 'Youssef Timoumi',
+      occupation: 'Full STACK DEV',
       image: {
-        src: 'https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: 'Cindy Belcher',
+        src: 'https://i.imgur.com/IeIXKpz.jpeg',
+        alt: 'Youssef Timoumi',
       },
       items: [
         {
           title: 'Know more on Twitter',
           icon: IconBrandTwitter,
-          href: '#',
+          href: 'https://x.com/unknowndeaduser',
         },
         {
           title: 'Know more on Linkedin',
           icon: IconBrandLinkedin,
-          href: '#',
+          href: 'https://www.linkedin.com/in/youssef-timoumi-45a003318/',
         },
         {
           title: 'Contact by email',
           icon: IconMail,
-          href: '#',
+          href: 'mailto:youssef1timoumi@hotmail.com',
         },
       ],
     },
     {
-      name: 'Toby Foster',
+      name: 'Reiner',
       occupation: 'Marketing Tech',
       image: {
-        src: 'https://images.unsplash.com/photo-1614583224978-f05ce51ef5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2172&q=80',
-        alt: 'Toby Foster',
+        src: 'https://i.imgur.com/IeIXKpz.jpeg',
+        alt: 'Cloud Engineer',
       },
       items: [
         {
           title: 'Know more on Twitter',
           icon: IconBrandTwitter,
-          href: '#',
+          href: 'https://x.com/unknowndeaduser',
         },
         {
           title: 'Know more on Linkedin',
           icon: IconBrandLinkedin,
-          href: '#',
+          href: 'https://www.linkedin.com/in/youssef-timoumi-45a003318/',
         },
         {
           title: 'Contact by email',
           icon: IconMail,
-          href: '#',
+          href: 'mailto:youssef1timoumi@hotmail.com',
         },
       ],
     },
-    {
-      name: 'Clark Bourne',
-      occupation: 'Content Manager',
-      image: {
-        src: 'https://images.unsplash.com/photo-1639628735078-ed2f038a193e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Clark Bourne',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Bella Chase',
-      occupation: 'UX Designer',
-      image: {
-        src: 'https://images.unsplash.com/photo-1628260412297-a3377e45006f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Bella Chase',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
+
   ],
 };

@@ -10,7 +10,7 @@ import ToggleMenu from '../atoms/ToggleMenu';
 import { headerData } from '~/shared/data/global.data';
 import CTA from '../common/CTA';
 import { CallToActionType } from '~/shared/types';
-
+import Chatbot from './Chatbot';
 const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
 
@@ -52,7 +52,7 @@ const Header = () => {
         isSticky ? 'sticky' : 'relative'
       } ${isToggleMenuOpen ? 'h-screen md:h-auto' : 'h-auto'}`}
       id="header"
-      style={{ backgroundColor: '#d9d9d9', color: '#000' }}
+      style={{ backgroundColor: '#dae7ed', color: '#000' }}
     >
       <div className="mx-auto w-full max-w-7xl md:flex md:justify-between md:py-3.5 md:px-4">
         <div className={`flex justify-between py-3 px-3 md:py-0 md:px-0`}>
@@ -164,6 +164,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <Chatbot />
     </header>
   );
 };

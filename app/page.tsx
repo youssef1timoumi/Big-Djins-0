@@ -17,7 +17,6 @@ import {
   heroHome,
   socialProofHome,
   teamHome,
-  testimonialsHome,
 } from '~/shared/data/pages/home.data';
 
 export const metadata: Metadata = {
@@ -30,7 +29,6 @@ export default function Page() {
       <SocialProof {...socialProofHome} />
       <Content {...contentHomeOne} />
       <Content {...contentHomeTwo} />
-      <Testimonials {...testimonialsHome} />
       <Team {...teamHome} />
     </>
   );
