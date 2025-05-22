@@ -2,14 +2,6 @@ import Image from 'next/image';
 
 const Logo = () => (
   <>
-    <style jsx global>{`
-      @font-face {
-        font-family: 'Newsletter';
-        src: url('/fonts/newsletter.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-      }
-    `}</style>
     <span className="flex items-center ml-2 self-center text-black">
       <Image
         src="/Djins.png"
@@ -18,7 +10,7 @@ const Logo = () => (
         height={75}
         className="mr-2"
       />
-      <span className="flex flex-col leading-tight" style={{ fontFamily: 'Newsletter' }}>
+      <span className="flex flex-col leading-tight" >
         <span className="text-2xl md:text-xl font-bold">
           BIG DJINS:0
         </span>

@@ -61,20 +61,32 @@ export const statsAbout: StatsProps = {
   items: [
     {
       title: 2020,
-      description: 'Année de fondation',
+      description: 'Year of foundation',
     },
     {
-      title: 100,
-      description: 'Employés',
+      title: 110,
+      description: 'Employees',
     },
     {
       title: 2,
-      description: 'Membres associés',
+      description: 'Associated members',
     },
     {
       title: 100000,
-      description: 'Pièces en 2025\n',
+      description: 'Units produced in 2025',
     },
+
+  ],
+};
+export const statsAbout1: StatsProps = {
+  id: 'stats-on-about',
+  hasBackground: true,
+  items: [
+    {
+      title: 5000,
+      description: 'Units per week',
+    },
+
   ],
 };
 
